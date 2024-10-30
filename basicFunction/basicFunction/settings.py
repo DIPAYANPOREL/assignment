@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-k75t94m%5u_v8*7x7@bewokibh6b31z^c#&*b*vxkci+(i_0-w'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -134,7 +136,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'poreldip@gmail.com'
-EMAIL_HOST_PASSWORD = 'dipayan@123'
+EMAIL_HOST_PASSWORD = "abcd"
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
