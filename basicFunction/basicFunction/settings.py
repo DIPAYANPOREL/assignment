@@ -130,44 +130,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = 'b62aaadf2159a1'
-EMAIL_HOST_PASSWORD = 'cd1a3bde6a785b'
-EMAIL_PORT = '2525'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = 'noreply@yourdomain.com'
+EMAIL_HOST_USER = 'poreldip@gmail.com'
+EMAIL_HOST_PASSWORD = 'dipayan@123'
 
-# Add these settings
-EMAIL_TIMEOUT = 30
-EMAIL_USE_SSL = False
-SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
-# For debugging
-EMAIL_TIMEOUT = 20  # Add timeout
-
-# Logging Configuration
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-        },
-    },
-    'loggers': {
-        '': {  # Root logger
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-        },
-        'django.request': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-    },
-}
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
