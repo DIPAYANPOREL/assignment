@@ -9,8 +9,8 @@ class CustomUser(AbstractUser):
 
 
     def save(self, *args, **kwargs):
-        if not self.id:  # If the user is being created
+        if not self.id:  
             self.date_joined = timezone.now()
-        self.last_active = timezone.now()  # Update last active timestamp
+        self.last_active = timezone.now()  
         super().save(*args, **kwargs)
 

@@ -38,7 +38,7 @@ def login_view(request):
         username = request.POST.get('username')  # Get username/email from form
         password = request.POST.get('password')
         
-        print(f"Login attempt - Username/Email: {username}")  # Debug print
+        print(f"Login attempt - Username/Email: {username}")  # Debug print to id username is coming in the request body or not 
         
         # First try to authenticate with username
         user = authenticate(request, username=username, password=password)
